@@ -3,4 +3,4 @@
   hosts: windows
   tasks:
    - name: test connection
-     ansible.windows.win_ping:
+     win_ping:
