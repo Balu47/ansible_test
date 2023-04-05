@@ -1,0 +1,20 @@
+---
+- name: check if a file exist
+  hosts: all
+  vars:
+    myfile: 'filepath/filename'
+  tasks:
+    - name: check if a file exist
+      win_stat:
+        path: "{{ myfile }}"
+      register: file_data
+
+    - name: report file exist
+      debug:
+        msg: "The file {{ myfile }} exist"
+      when: file_data.stat.exists
+
+    - name: report file not exist
+      debug:
+        msg: "The file {{ myfile }} doesn't exist"
+      when: not file_data.stat.exists
