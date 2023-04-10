@@ -1,0 +1,3 @@
+- name: Find files in path
+  win_find:
+    paths: C:\Users\CN331870\Downloads
