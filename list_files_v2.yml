@@ -10,4 +10,5 @@
      
    - name: List files in path
      debug:
-      msg: "output {{ result.files }}"
+       msg: "output: "
+         with_items: result
