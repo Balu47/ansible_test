@@ -10,4 +10,4 @@
      
    - name: List files in path
      debug:
-       msg: "output: {{ result.filename }}"
+       msg: "output: {{ result.files.filename }}"
