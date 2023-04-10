@@ -5,7 +5,7 @@
    - name: Find files in path
      win_find:
        paths: C:\Users\CN331870\Downloads\
-       file_type: directory
+       file_type: file
      register: result
      
    - name: List files in path
