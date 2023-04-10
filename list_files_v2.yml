@@ -1,0 +1,13 @@
+---
+- name: Find and List files
+  hosts: all
+  tasks:
+   - name: Find files in path
+     win_find:
+       paths: C:\Users\CN331870\Downloads\
+       file_type: directory
+     register: result
+     
+   - name: List files in path
+     debug:
+      msg: "output {{ result.files }}"
