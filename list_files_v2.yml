@@ -10,5 +10,5 @@
      
    - name: List files in path
      debug:
-       msg: "output: {{ files[filename] }}"
-     loop: {{ result.files }}
+       msg: "output: {{ item [filename] }}"
+     loop: "{{ result.files }}"
