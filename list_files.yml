@@ -1,5 +1,7 @@
 ---
-- name: Find files in path
+- name: win_ping module demo
   hosts: all
-  win_find:
-    paths: C:\Users\CN331870\Downloads
+  tasks:
+   - name: Find files in path
+     win_find:
+       paths: C:\Users\CN331870\Downloads
