@@ -11,4 +11,4 @@
    - name: List files in path
      debug:
        msg: "output: {{ result.files }}"
-     with_items: {{ result.files }}
+     with_items: {{ result.files | map(attribute='stdout_lines') | list}}
