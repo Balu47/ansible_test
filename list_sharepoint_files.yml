@@ -1,0 +1,14 @@
+---
+- name: Find and List files
+  hosts: all
+  tasks:
+   - name: Find files in path
+     win_uri:
+        url: https://centene.sharepoint.com/teams/MedicaidParserEYExternalFileShare/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=QYl9tb&cid=e437977b%2D7483%2D4293%2D8dbc%2D5edeb0c9b111&RootFolder=%2Fteams%2FMedicaidParserEYExternalFileShare%2FShared%20Documents%2FFinal%20Medicaid%20PDFs&FolderCTID=0x01200079C5720513E9F34EAF3E839D8103E1AE
+        return_content: yes
+     register: the_files
+     
+   - name: List files in path
+     debug:
+       msg: "{{ the_files.content | regex_findall('\w+\.pdf') }}"
+     with_items: "{{ the_files.content | regex_findall('\w+\.pdf') }}"
