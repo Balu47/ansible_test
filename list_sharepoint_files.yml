@@ -10,5 +10,5 @@
      
    - name: List files in path
      debug:
-       msg: "{{ the_files.content | regex_findall('\w+\.pdf') }}"
-     with_items: "{{ the_files.content | regex_findall('\w+\.pdf') }}"
+       msg: "{{ the_files.content }}"
+     with_items: "{{ the_files.content }}"
