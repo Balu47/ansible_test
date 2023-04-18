@@ -1,0 +1,6 @@
+---
+- name: run Python script
+  hosts: all
+  tasks:
+    - name: run sharepoint_data_refresh.py script
+      command: python C:/Users/CN331870/Documents/sharepoint_data_refresh.py
