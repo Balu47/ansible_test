@@ -4,6 +4,7 @@
   tasks:
     - name: run sharepoint_data_refresh.py script
       script: C:/Users/CN331870/Documents/sharepoint_data_refresh.py
+        remote_src: yes
       args:
         executable: C:/Program Files/Python311/python.exe
         remote_src: yes
