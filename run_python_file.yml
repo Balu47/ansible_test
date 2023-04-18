@@ -3,6 +3,6 @@
   hosts: all
   tasks:
     - name: run sharepoint_data_refresh.py script
-      script:
+      script: /sharepoint_data_refresh.py
+      args:
         executable: python3
-        cmd: sharepoint_data_refresh.py
