@@ -6,7 +6,7 @@ import time
 File = win32com.client.Dispatch("Excel.Application")
 
 # Opening workbook
-Workbook = File.Workbooks.open("salesforce_data.xlsx")
+Workbook = File.Workbooks.open(r"C:\Users\CN331870\Documents\salesforce_data.xlsx")
 
 # Refeshing all the shests
 Workbook.RefreshAll()
