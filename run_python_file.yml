@@ -2,12 +2,7 @@
 - name: run Python script
   hosts: all
   tasks:
-    - name: run filename.py script
+    - name: run sharepoint_data_refresh.py script
       script:
         executable: python3
-        cmd: cars.py
-      register: cars_raw_output
-    - name: print cars_raw_output
-      debug:
-        var: cars_raw_output
-        verbosity: 2
+        cmd: sharepoint_data_refresh.py
