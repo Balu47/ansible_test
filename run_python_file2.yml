@@ -9,4 +9,5 @@
       register: output
       
     - name: show output
-      debug: output.stdout_lines
+      debug: 
+        msg: output.stdout_lines
