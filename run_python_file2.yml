@@ -5,4 +5,4 @@
     ansible_python_interpreter: /usr/bin/env
   tasks:
     - name: run hello.py script
-      command: python3 C:/Users/CN331870/Documents/hello.py
+      command: python C:/Users/CN331870/Documents/hello.py
