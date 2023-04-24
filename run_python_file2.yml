@@ -7,6 +7,5 @@
         if [ -f /usr/bin/python3 ] && [ ! -f /usr/bin/python ]; then
           ln --symbolic /usr/bin/python3 /usr/bin/python; 
         fi
-      become: true
     - name: run hello.py script
       command: python C:/Users/CN331870/Documents/hello.py
