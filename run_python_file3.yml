@@ -1,0 +1,11 @@
+---
+- name: run Python script
+  hosts: all
+  vars:
+    ansible_python_interpreter: /usr/bin/env
+  tasks:
+    - name: run hello.py script
+      script:
+        remote_src: yes
+        cmd: C:/Users/CN331870/Documents/hello.py
+        executable: C:/Program Files/Python311/python.exe
