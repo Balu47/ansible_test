@@ -1,6 +1,8 @@
 ---
 - name: run Python script
   hosts: all
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
   tasks:
     - name: run hello.py script
       command: python C:/Users/CN331870/Documents/hello.py
