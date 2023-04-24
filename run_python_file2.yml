@@ -10,5 +10,4 @@
       
     - name: show output
       debug: 
-        msg: output:
         var: output.stdout_lines
