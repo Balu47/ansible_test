@@ -6,3 +6,7 @@
   tasks:
     - name: run hello.py script
       win_command: python C:/Users/CN331870/Documents/hello.py
+      register: output
+      
+    - name: show output
+      debug: output.stdout_lines
