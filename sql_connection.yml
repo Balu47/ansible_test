@@ -1,0 +1,8 @@
+- name: Check DB connection
+  community.general.mssql_script:
+    login_user: "{{ mssql_login_user }}"
+    login_password: "{{ mssql_login_password }}"
+    login_host: "{{ mssql_host }}"
+    login_port: "{{ mssql_port }}"
+    db: master
+    script: "SELECT 1"
