@@ -1,0 +1,13 @@
+---
+- name: run Python script
+  hosts: all
+  vars:
+    ansible_python_interpreter: '/usr/bin/env'
+  tasks:
+    - name: run hello.py script
+      win_command: python C:/Users/CN331870/Documents/solrdb.py
+      register: output
+      
+    - name: show output
+      debug: 
+        var: output.stdout_lines
