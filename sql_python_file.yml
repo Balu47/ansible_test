@@ -15,6 +15,11 @@
         ansible_become: true
         ansible_become_method: runas
         ansible_become_user: CENTENE\CN331870
+        ansible_connection: winrm
+        ansible_port: 5985
+        ansible_winrm_scheme: http
+        ansible_winrm_server_cert_validation: ignore
+        ansible_winrm_transport: ntlm
       register: output
       
     - name: show output
