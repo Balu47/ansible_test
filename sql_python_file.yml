@@ -4,6 +4,9 @@
   delegate_to: localhost
   vars:
     ansible_python_interpreter: '/usr/bin/env'
+    ansible_become: true
+    ansible_become_method: runas
+    ansible_become_user: CENTENE\CN331870
   tasks:
     - name: run hello.py script
       win_command: python C:/Users/CN331870/Documents/sqldb.py
