@@ -9,7 +9,7 @@
   tasks:
     - name: run hello.py script
       win_command: python C:/Users/CN331870/Documents/sqldb.py
-      delegate_to: all
+      delegate_to: 172.19.44.193
       vars:
         ansible_python_interpreter: '/usr/bin/env'
         ansible_become: true
