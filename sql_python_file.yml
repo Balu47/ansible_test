@@ -6,6 +6,7 @@
     ansible_become: true
     ansible_become_method: runas
     ansible_become_user: CENTENE\CN331870
+  delegate_to: 172.19.44.193
   tasks:
     - name: run hello.py script
       win_command: python C:/Users/CN331870/Documents/sqldb.py
