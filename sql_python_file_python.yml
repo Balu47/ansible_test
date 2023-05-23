@@ -1,0 +1,27 @@
+---
+- name: run Python script
+  hosts: all
+  vars:
+    ansible_python_interpreter: '/usr/bin/env'
+    ansible_become: true
+    ansible_become_method: runas
+    ansible_become_user: CENTENE\CN331870
+  tasks:
+    - name: run hello.py script
+      win_command: python C:/Users/CN331870/Documents/sqldb.py
+      vars:
+        ansible_python_interpreter: '/usr/bin/env'
+        ansible_become: true
+        ansible_become_method: runas
+        ansible_become_user: CENTENE\CN331870
+        ansible_connection: winrm
+        ansible_port: 5985
+        ansible_winrm_scheme: http
+        ansible_winrm_server_cert_validation: ignore
+        ansible_winrm_transport: ntlm
+      delegate_to: 172.19.44.193
+      register: output
+      
+    - name: show output
+      debug: 
+        var: output.stdout_lines
