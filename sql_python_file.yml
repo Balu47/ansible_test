@@ -11,6 +11,7 @@
       win_shell: |
         #!/bin/sh
         cd C:/Users/CN331870/Documents
+        dir
       vars:
         ansible_python_interpreter: '/usr/bin/env'
         ansible_become: true
