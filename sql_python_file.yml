@@ -8,7 +8,10 @@
     ansible_become_user: CENTENE\CN331870
   tasks:
     - name: run hello.py script
-      win_command: python C:/Users/CN331870/Documents/sqldb.py
+      win_shell: |
+        #!/bin/sh
+        cd Documents
+        python sqldb.py
       vars:
         ansible_python_interpreter: '/usr/bin/env'
         ansible_become: true
