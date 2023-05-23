@@ -10,8 +10,7 @@
     - name: run hello.py script
       win_shell: |
         #!/bin/sh
-        cd Documents
-        python sqldb.py
+        dir
       vars:
         ansible_python_interpreter: '/usr/bin/env'
         ansible_become: true
