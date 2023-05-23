@@ -11,7 +11,7 @@
       win_shell: |
         #!/bin/sh
         cd C:/Users/CN331870/Documents
-        dir
+        python sqldb.py
       vars:
         ansible_python_interpreter: '/usr/bin/env'
         ansible_become: true
