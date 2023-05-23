@@ -10,7 +10,7 @@
     - name: run hello.py script
       win_shell: |
         #!/bin/sh
-        dir
+        cd C:/Users/CN331870/Documents
       vars:
         ansible_python_interpreter: '/usr/bin/env'
         ansible_become: true
